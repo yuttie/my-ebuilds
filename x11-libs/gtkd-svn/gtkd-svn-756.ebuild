@@ -22,13 +22,12 @@ DEPEND="
 	x11-libs/gtkglext"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	subversion_src_unpack
+pkg_setup() {
+	LDFLAGS=`echo ${LDFLAGS} | sed -e 's/-Wl,/-L/g'`
 }
 
-
-src_compile() {
-	emake libs || die "emake failed"
+src_unpack() {
+	subversion_src_unpack
 }
 
 src_install() {
