@@ -19,10 +19,10 @@ S=${WORKDIR}/${MY_P}
 LICENSE="CPL"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="lapack"
+IUSE="quasi-newton"
 
 DEPEND="virtual/blas
-        lapack? ( virtual/lapack )"
+        quasi-newton? ( virtual/lapack )"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
