@@ -15,12 +15,12 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="
-	|| ( >=dev-lang/dmd-2.034 >=dev-lang/dmd-1.0.49 )
-	>=x11-libs/gtk+-2
-	media-libs/mesa
-	x11-libs/gtkglext"
-RDEPEND="${DEPEND}"
+RDEPEND="
+    || ( >=dev-lang/dmd-2.034 >=dev-lang/dmd-1.0.49 )
+    >=x11-libs/gtk+-2
+    media-libs/mesa
+    x11-libs/gtkglext"
+DEPEND="${RDEPEND}"
 
 pkg_setup() {
 	LDFLAGS=`echo ${LDFLAGS} | sed -e 's/-Wl,/-L/g'`
