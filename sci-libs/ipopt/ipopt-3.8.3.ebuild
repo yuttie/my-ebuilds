@@ -21,9 +21,9 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="quasi-newton"
 
-DEPEND="virtual/blas
-        quasi-newton? ( virtual/lapack )"
-RDEPEND="${DEPEND}"
+RDEPEND="virtual/blas
+         quasi-newton? ( virtual/lapack )"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${MY_P}.tgz || die "unpack ${MY_P}.tgz failed"
