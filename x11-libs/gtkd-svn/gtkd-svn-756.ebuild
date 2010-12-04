@@ -32,4 +32,5 @@ src_unpack() {
 
 src_install() {
 	emake DESTDIR="${D}" prefix="/usr" install || die "emake install failed"
+	dodoc AUTHORS README
 }
