@@ -38,6 +38,7 @@ src_unpack() {
 
 src_prepare() {
 	append-cflags "-std=c89"
+	sed -i -e 's!PKG_CONFIG_PATH=@COIN_PKG_CONFIG_PATH@!PKG_CONFIG_PATH=.:../ThirdParty/Mumps!' Ipopt/Makefile.in
 }
 
 src_compile() {
