@@ -12,7 +12,7 @@ ESVN_REPO_URI="http://svn.dsource.org/projects/gtkd/trunk"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 RDEPEND="
