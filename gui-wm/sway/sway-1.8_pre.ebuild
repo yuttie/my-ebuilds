@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit meson optfeature
+inherit fcaps meson optfeature
 
 DESCRIPTION="i3-compatible Wayland window manager"
 HOMEPAGE="https://swaywm.org"
@@ -105,6 +105,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	fcaps cap_sys_nice+eip usr/bin/sway
+
 	optfeature_header "There are several packages that may be useful with sway:"
 	optfeature "wallpaper utility" gui-apps/swaybg
 	optfeature "idle management utility" gui-apps/swayidle
