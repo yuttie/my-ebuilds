@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
+inherit xdg
 
 DESCRIPTION="A macOS Big Sur-style icon theme for Linux desktops"
 HOMEPAGE="https://github.com/vinceliuice/WhiteSur-icon-theme"
